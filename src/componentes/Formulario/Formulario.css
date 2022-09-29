@@ -4,6 +4,11 @@
   margin: 50px 0;
 }
 
+.formulario h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
 .formulario form {
   max-width: 80%;
   background-color: #b6ad7c;

@@ -1,6 +1,7 @@
 import './Formulario.css'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
+import Botao from '../Botao'
 
 const Formulario = () => {
   const times = ['Pedreiro', 'Gesseiro', 'Pintor']
@@ -15,6 +16,7 @@ const Formulario = () => {
           placeholder="Residêncial, comercial ou intitucional"
         />
         <ListaSuspensa label="Profissionais:" itens={times} />
+        <Botao texto="Criar Card" />
       </form>
     </section>
   )

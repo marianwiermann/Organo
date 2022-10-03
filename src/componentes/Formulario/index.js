@@ -6,17 +6,31 @@ import Botao from '../Botao'
 const Formulario = () => {
   const times = ['Pedreiro', 'Gesseiro', 'Pintor']
 
+  const aoSalvar = evento => {
+    evento.preventDefault()
+    console.log('Form foi submetido')
+  }
+
   return (
     <section className="formulario">
-      <form>
+      <form onSubmit={aoSalvar}>
         <h2>Preencha:</h2>
-        <CampoTexto label="Nome:" placeholder="Digite seu nome" />
         <CampoTexto
+          obrigatorio={true}
+          label="Nome:"
+          placeholder="Digite seu nome"
+        />
+        <CampoTexto
+          obrigatorio={true}
           label="Tipo de obra:"
           placeholder="Residêncial, comercial ou intitucional"
         />
-        <ListaSuspensa label="Profissionais:" itens={times} />
-        <Botao texto="Criar Card" />
+        <ListaSuspensa
+          obrigatorio={true}
+          label="Profissionais:"
+          itens={times}
+        />
+        <Botao>Criar Card</Botao>
       </form>
     </section>
   )
